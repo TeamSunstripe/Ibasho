@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>置き場 - Settings</title>
+<script type="text/javascript" src="./js/main.js"></script>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    #side-menu{
+        background-color: rgba(245,245,245,1.0);
+        width: 100px;
+    }
+    #side-menu li {
+        list-style-type: none;
+    }
+    #side-menu li:hover {
+        background-color: rgba(0,0,255,0.1);
+    }
+
+    #settings-table-business-time {
+        width: 100%;
+    }
+    #settings-table-business-time table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    #settings-table-business-time th,table td{
+        padding: 10px 0;
+        text-align: center;
+    }
+    #settings-table-business-time tr:nth-child(odd){
+        background-color: #eee;
+    }
+
+    #settings-table-push-promotion {
+        width: 100%;
+    }
+    #settings-table-push-promotion table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    #settings-table-push-promotion th,table td{
+        padding: 10px 0;
+        text-align: center;
+    }
+    #settings-table-push-promotion tr:nth-child(odd){
+        background-color: #eee;
+    }
+    
+    #settings-table-registration-time {
+        width: 100%;
+        font-size: 0.8em;
+    }
+    #settings-table-registration-time table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    #settings-table-registration-time th,table td{
+        padding: 10px 0;
+        text-align: center;
+    }
+    #settings-table-registration-time tr:nth-child(odd){
+        background-color :rgba(200, 120, 0, 0.3);
+    }
+    
+    #settings-button {
+        display: block;
+        text-align: center;
+        width: 200px;
+        height: 60px;
+        display: inline-block;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        background: #668ad8;/*ボタン色*/
+        color: #FFF;
+        border-bottom: solid 4px #627295;
+        border-radius: 3px;
+        font-size:22px;
+    }
+</style>
+<body>
+<h1>置き場 - Settings</h1>
+<div id="side-menu">
+<script>
+    menuListDisplay();
+</script>
+</div>
+<p>設定では、掲示板に表示する曜日や時間の設定を行います。表示したい曜日を選択してください。</p>
+<h3>営業時間設定</h3>
+<table id="settings-table-business-time">
+    <tr><td>曜日</td></tr>
+    <tr><td>祝日</td></tr>
+    <tr><td>営業時間（開始）</td></tr>
+    <tr><td>営業時間（終了）</td></tr>            
+</table>
+<h3>ログイン促進</h3>
+<table id="settings-table-push-promotion">
+    <tr><td>ON / OFF</td></tr>
+    <tr><td>プッシュ通知時間</td></tr>
+</table>
+<table id="settings-table-registration-time">
+    <tr><td>登録日時</td></tr>
+    <tr><td>更新日時</td></tr>            
+</table>
+<div style="width:100%;">
+    <button id="settings-button">設定する</button>
+</div>
+</body>
+</html>
